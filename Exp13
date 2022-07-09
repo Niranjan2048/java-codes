@@ -1,0 +1,47 @@
+class Digit extends Thread
+{
+   public void run()
+    {  
+       for(i=1;i<10;i++)
+       {
+           system.out.print(i);
+           try 
+           { thread.sleep(100);
+           }
+           catch(Exception e)
+           {
+           }
+       }   
+           
+    }
+class Alphabet extends Thread
+{
+	public void run()
+	{
+		for(int i=1; i<=10; i++)
+		{
+			System.out.print(char(64+i));
+			try
+			{
+				Thread.sleep(550);
+			}
+			catch(Exception e)
+			{
+			}
+		}
+	}
+}
+	
+class Exp13
+{
+	public static void main(String args[])
+	{
+		System.out.println("Multi-threading");
+		
+		Numbers n = new Numbers();
+		n.start();
+		
+		Alphabet a = new Alphabet();
+		a.start();
+	}
+}  

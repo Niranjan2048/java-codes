@@ -1,0 +1,53 @@
+import java.util.*;
+
+class Fact extends Exception
+{
+	String msg;
+	Fact()
+	{
+		msg = "Factorial too large ";
+	}
+}
+class Numeric
+{  
+public static void main(String args[]){  
+
+
+n=args.length;  
+for(int i=0;i<n;i++)
+{  
+System.out.println(args[i]);
+}  
+if(n % 2==0)
+{   
+	Factorial f=new Factorial();
+	num=f.factorial(n);
+	if(num>32767)
+	{
+	throw new Fact();
+	}
+} 
+else{ 
+System.out.println(num);
+	
+} 
+catch(Fact e)
+		{
+			System.out.println(e.msg);
+			e.printStackTrace();
+		}
+}  
+}  
+
+
+public class Factorial {
+public static factorial(int number) {
+    int result = int.valueOf(1);
+
+    for (long factor = 2; factor <= number.longValue(); factor++) {
+        result = result.multiply(int.valueOf(factor));
+    }
+
+    return result;
+}
+}

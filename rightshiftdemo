@@ -1,0 +1,7 @@
+import java.util.scanner;
+// import java.uitl.*;
+class rightshiftdemo
+{ public static void main(String args[])
+     { 
+        scanner sc=new Scanner(System.in)
+        
